@@ -6,6 +6,7 @@ function App() {
   return (
     <div className="App">
       {/*Insert NavBar*/}
+      {/*Insert more paths as needed*/}
       <Router>
         <Route path = '/login'>
           {/*Add login component*/}
