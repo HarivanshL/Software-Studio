@@ -1,0 +1,21 @@
+nav {
+    display: flex;
+    justify-content: space-betweeen;
+    padding: 10px;
+    background-color: #990000;
+    color:#FFFFED;
+}
+.button{
+    color: #FFFFED;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+.link{
+    color:#DAC0A7
+}
+
+#container {
+    
+}

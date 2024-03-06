@@ -15,6 +15,7 @@ function App() {
           {/*Add home component*/}
         </Route>
       </Router>
+      {/*Conditional rendering of components based on login status*/}
     </div>
   );
 }
