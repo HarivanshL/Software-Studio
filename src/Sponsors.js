@@ -2,7 +2,7 @@
 import App from './App.css';
 import React from 'react';
 
-function Home() {
+function Sponsors() {
   return (
     <div id ="container">
       <h>Software Studio</h>
@@ -14,4 +14,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Sponsors;

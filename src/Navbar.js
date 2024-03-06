@@ -1,28 +1,41 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
-import { useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import './App.css';
+import Home from './Home'
+import Sponsors from './Sponsors'
+import Login from './Login'
 
-function navigationBar() {
+/*function navigationBar() {
+    
     
     let navigate = useNavigate(); 
     const routeChange = () =>{ 
         let path = `newPath`; 
         navigate(path);
-    }
+    }*/
 
+const Navbar = () => {
     return (
-        <nav>
-            <li>
-                <Link to="/">Home</Link>
-            </li>
-            <li>
-                <Link to="/">Sponsors</Link>
-            </li>
-            <li>
-                <Link to="/">Login</Link>
-            </li>
-        </nav>
+      <nav className="navBar">
+        <div className="navContainer">
+          <Link to="/" className="navLink">
+            Home
+          </Link>
+          <Link to="/sponsors" className="navLink">
+              Sponsors
+          </Link>
+        </div>
+        <div className="navContainerRight">
+            <div className="loginButton">
+            <Link to="/login" className="navLink">
+                Login
+            </Link>
+            </div>
+        </div>
+      </nav>
     );
-}
+  };
 
-export default navigationBar;
+export default Navbar;

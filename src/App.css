@@ -1,21 +1,63 @@
-nav {
+.navBar {
+    display: flex;
+    justify-content: space-betweeen;
+    padding: 10px;
+    color:#FFFFED;
+    background-color: crimson;
+    height: 85px;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .navSoftwareStudio {
+    /*for our logo or something*/
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1rem;
+  }
+  
+  .navContainerRight {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    }
+  
+  .navLink {
+    color: rgb(241, 231, 214);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 1rem;
+    transition: color 0.3s;
+  }
+  
+  .navLink:hover {
+    color: #030202;
+  }
+  
+  .loginButton {
+    color: rgb(241, 231, 214);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 2px solid rgb(241, 231, 214);
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .loginButton:hover {
+    background-color: rgb(241, 231, 214);
+  }
+  .loginButton:hover .navLink {
+    color:black;
+  }
+
+  
+
+#container {
     display: flex;
     justify-content: space-betweeen;
     padding: 10px;
     background-color: #990000;
     color:#FFFFED;
-}
-.button{
-    color: #FFFFED;
-    padding: 10px 20px;
-    text-align: center;
-    font-size: 16px;
-    margin: 4px 2px;
-}
-.link{
-    color:#DAC0A7
-}
-
-#container {
-    
 }

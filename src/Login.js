@@ -1,11 +1,11 @@
-import {useState} from React
+import './App.css';
 
 
 async function authenticate() {
 
 }
 
-function App() {
+function Login() {
   return (
     <div className="container">
         <form onSubmit={this.handleSubmit}>
@@ -19,4 +19,4 @@ function App() {
   );
 }
 
-export default App;
+export default Login;
