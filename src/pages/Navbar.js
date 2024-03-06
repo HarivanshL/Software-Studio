@@ -2,10 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
 import { NavLink } from 'react-router-dom';
-import './App.css';
-import Home from './Home'
-import Sponsors from './Sponsors'
-import Login from './Login'
+import '../css-styling/App.css';
+
 
 /*function navigationBar() {
     

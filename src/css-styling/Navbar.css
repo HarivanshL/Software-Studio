@@ -51,13 +51,3 @@
   .loginButton:hover .navLink {
     color:black;
   }
-
-  
-
-#container {
-    display: flex;
-    justify-content: space-betweeen;
-    padding: 10px;
-    background-color: #990000;
-    color:#FFFFED;
-}
