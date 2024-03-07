@@ -1,18 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import '../css-styling/Navbar.css';
+import bannerImage from '../assets/images.jpeg'
 
 const CustomNavbar = () => {
   return (
-
     <>
-      <Navbar bg="dark" variant="dark">
+      <div className="banner-container">
+        <img src={bannerImage} alt="Banner" className="banner-image" />
+        <div className="banner-text">Software Studio</div>
+      </div>
+      <Navbar bg="crimson" variant="dark" className="navbar">
         <Container>
-          <Navbar.Brand as={Link} to="/">Home</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/about">About</Nav.Link>
-            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+            <Nav.Link as={Link} to="/" className="nav-link">Home</Nav.Link>
+            <Nav.Link as={Link} to="/about" className="nav-link">About</Nav.Link>
+            <Nav.Link as={Link} to="/contact" className="nav-link">Contact</Nav.Link>
+          </Nav>
+          <Nav>
+            <Button as={Link} to="/login" variant="light" className="login-button">Login</Button>
           </Nav>
         </Container>
       </Navbar>
