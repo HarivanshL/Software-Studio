@@ -10,13 +10,26 @@
 .home-container {
     padding-top: 20px;
 }
+h1 {
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+p {
+  font-size: 25px;
+  padding-left: 160px;
+  padding-right: 160px;
+
+}
 
 .linkbar {
 
 }
 
 .team {
-
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .proffessor {

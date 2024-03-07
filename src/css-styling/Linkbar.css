@@ -1,0 +1,22 @@
+.buttons {
+    background-color: #841617;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-around; /* Centers items horizontally */
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+.button {
+    background-color: #841617;
+    border: 2px solid white;
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: white;
+    color: #841617;
+  }
