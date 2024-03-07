@@ -10,12 +10,11 @@
 .home-container {
     padding-top: 20px;
 }
+
 h1 {
   text-align: center;
 }
-h2 {
-  text-align: center;
-}
+
 p {
   font-size: 25px;
   padding-left: 160px;
@@ -23,19 +22,42 @@ p {
 
 }
 
-.linkbar {
-
-}
-
 .team {
   margin-top: 10px;
   margin-bottom: 10px;
+  align-items: center; /* Center items vertically */
+  text-align: center;
 }
 
-.proffessor {
-
+.proffesor {
+  padding-top: 50px;
 }
 
-.metors {
-    
+.proffesor h3 {
+  font-size: 30px;
+}
+.proffesor p {
+  font-size: 25px;
+}
+
+.mentors {
+  align-items: center; /* Center items vertically */
+  justify-content: space-around;
+}
+
+.page-break {
+  display: flex; /* Use flexbox */
+  align-items: center; 
+  justify-content: center; 
+  flex-wrap: wrap; /* Allow items to wrap if necessary */
+  gap: 20px; /* Add spacing between items */
+}
+
+.break-line {
+  flex: 1;
+  border: none; 
+  height: 3px; 
+  background-color: black; 
+  margin-left: 5%;
+  margin-right: 5%;
 }

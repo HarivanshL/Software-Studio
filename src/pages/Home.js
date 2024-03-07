@@ -17,9 +17,14 @@ function Home() {
           <Linkbar />
         </div>
         <div className = 'team'>
+          <div className='page-break'>
+          <hr class="break-line"></hr>
           <h2>Meet Our Team</h2>
+          <hr class="break-line"></hr>
+          </div>
           <div className='proffesor'>
-
+            <h3>Dr. Mansoor Abdulhak</h3>
+            <p>About him</p>
           </div>
           <div className='mentors'>
 
