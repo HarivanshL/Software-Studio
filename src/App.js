@@ -9,26 +9,14 @@ import Navbar from './pages/Navbar'
 function App() {
   return (
 
-      <div className="App">
-        <Navbar />
-        <Router>
-        {/*Insert NavBar*/}
-        {/*Insert more paths as needed*/}
+  <>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          {/*
-        <Route path="/login" element={<Login />} />
-        <Route path="/sponsors" element={<Sponsors />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/members" element={<Members />} />
-          */}
-        </Routes>
-
-        {/*Conditional rendering of components based on login status*/}
-        </Router>
-      </div>
+    </Router>
+  </>
 
   );
 }

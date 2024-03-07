@@ -1,39 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ReactDOM from 'react-dom/client';
-import { NavLink } from 'react-router-dom';
-import '../css-styling/App.css';
+import { Navbar, Nav, Container } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 
+const CustomNavbar = () => {
+  return (
 
-/*function navigationBar() {
-    
-    
-    let navigate = useNavigate(); 
-    const routeChange = () =>{ 
-        let path = `newPath`; 
-        navigate(path);
-    }*/
+    <>
+      <Navbar bg="dark" variant="dark">
+        <Container>
+          <Navbar.Brand as={Link} to="/">Home</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link as={Link} to="/about">About</Nav.Link>
+            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+    </>
+  );
+};
 
-const Navbar = () => {
-    return (
-      <nav className="navBar">
-        <div className="navContainer">
-          <Link to="/" className="navLink">
-            Home
-          </Link>
-          <Link to="/sponsors" className="navLink">
-              Sponsors
-          </Link>
-        </div>
-        <div className="navContainerRight">
-            <div className="loginButton">
-            <Link to="/login" className="navLink">
-                Login
-            </Link>
-            </div>
-        </div>
-      </nav>
-    );
-  };
-
-export default Navbar;
+export default CustomNavbar;
