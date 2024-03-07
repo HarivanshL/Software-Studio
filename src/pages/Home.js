@@ -1,5 +1,5 @@
 //import {useState} from React
-import App from '../css-styling/App.css';
+import '../css-styling/Home.css';
 import React from 'react';
 import Navbar from './Navbar';
 
@@ -7,10 +7,23 @@ function Home() {
   return (
     <>
       <Navbar />
-      <div id = 'home-container'>
+      <div className = 'home-container'>
         <h1>Welcome to Software Studio</h1>
-        <div id = 'home-div1'>
+        <div className = 'home-div1'>
           <p>We're your gateway to hands-on training, portfolio building, and real-world experience in software development. Join our community to enhance your skills, boost your confidence, and prepare for success in the tech industry. Let's code the future together at Software Studio.</p>
+          <p>Sample p2</p> 
+        </div>
+        <div className='linkbar'>
+
+        </div>
+        <div className = 'team'>
+          <h2>Meet Our Team</h2>
+          <div className='proffesor'>
+
+          </div>
+          <div className='mentors'>
+
+          </div>
         </div>
       </div>
     </>
