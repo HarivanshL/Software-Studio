@@ -2,7 +2,10 @@
 import '../css-styling/Home.css';
 import React from 'react';
 import Navbar from './Navbar';
-import Linkbar from '../Components/Linkbar';
+import Linkbar from '../components/Linkbar';
+import PersonBioService from '../lib/services/PersonBio.service';
+import PersonBio from "../components/PersonBio";
+import { Container, Row, Col } from 'react-bootstrap';
 
 function Home() {
   /** 
@@ -12,50 +15,40 @@ function Home() {
    * 
   */
 
+  const personsBios = PersonBioService.getAllPersonBios();
+  console.log(personsBios);
   return (
     <>
       <Navbar />
-      <div className = 'home-container'>
+      <div className='home-container'>
         <h1>Welcome to Software Studio</h1>
-        <div className = 'home-div1'>
+        <div className='home-div1'>
           <p>We're your gateway to hands-on training, portfolio building, and real-world experience in software development. Join our community to enhance your skills, boost your confidence, and prepare for success in the tech industry. Let's code the future together at Software Studio.</p>
         </div>
         <div className='linkbar'>
           <Linkbar />
         </div>
-        <div className = 'team'>
-          <div className='page-break'>
-          <hr class="break-line"></hr>
-          <h2>Meet Our Team</h2>
-          <hr class="break-line"></hr>
-          </div>
-          <div className='proffesor'>
-            <h3>Dr. Mansoor Abdulhak</h3>
-            <p>About him</p>
-          </div>
-          <div className='mentors'>
-            <div className='mentor'>
-              <h1>Safia Mesiya</h1>
-              <p>Bio</p>
-            </div>
-            <div className='mentor'>
-              <h1>Nick Thompson</h1>
-              <p>Bio</p>
-            </div>
-            <div className='mentor'>
-              <h1>Matthew Agron</h1>
-              <p>Bio</p>
-            </div>
-            <div className='mentor'>
-              <h1>Brianna Patten</h1>
-              <p>Bio</p>
-            </div>
-            <div className='mentor'>
-              <h1>Harivansh Luchmun</h1>
-              <p>Bio</p>
-            </div>
-          </div>
-        </div>
+
+        {/*FIXME holy moly this chunk below is bad*/}
+        <Container>
+      <Row className="align-items-center">
+        <Col xs={4} className="d-flex justify-content-end">
+          <hr style={{ width: '50%' }} />
+        </Col>
+        <Col xs={4} className="text-center">
+          <h2 style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', fontSize: '1.5rem', margin: '0' }}>Meet our team</h2>
+        </Col>
+        <Col xs={4} className="d-flex justify-content-start">
+          <hr style={{ width: '50%' }} />
+        </Col>
+      </Row>
+    </Container>
+        {
+          personsBios.map((personBio) => (
+            <PersonBio key={personBio.id} personBioModel={personBio} />
+          ))
+        }
+
       </div>
     </>
   );
