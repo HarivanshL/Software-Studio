@@ -146,3 +146,8 @@ p {
   align-items: center; /* Center items vertically */
   justify-content: space-around;
 }
+
+.carousel {
+  align-items: center;
+  width: 100%;
+}

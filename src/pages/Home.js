@@ -7,6 +7,7 @@ import PersonBioService from '../lib/services/PersonBio.service';
 import PersonBio from "../Components/PersonBio";
 import { Container, Row, Col } from 'react-bootstrap';
 import SSLogoImage from '../assets/ss-logo.png'
+import ScrollingCarousel from '../Components/ScrollingCarousel';
 
 function Home() {
   /** 
@@ -53,15 +54,11 @@ function Home() {
           </Row>
         </Container>
 
-        {
-          personsBios.map((personBio) => (
 
-            personBio.bio === "Leader" ? (
-              <PersonBio key={personBio.id} personBioModel={personBio} />
-            ) : (null)
-          ))
-        }
+        <PersonBio key={personsBios[0].id} personBioModel={personsBios[0]} />
 
+
+        {/*
         <Container className='mentor-list'>
           {
             personsBios.map((personBio, index) => (
@@ -71,7 +68,15 @@ function Home() {
               ) : (null)
             ))
           }
+
         </Container>
+        */}
+        <Container className='carousel'>
+          <ScrollingCarousel items={personsBios} />
+        </Container>
+
+
+        
 
 
       </div>

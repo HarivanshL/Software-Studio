@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const PersonBio = ({ personBioModel }) => {
   console.log(personBioModel);
   return (
@@ -12,6 +13,8 @@ const PersonBio = ({ personBioModel }) => {
     </div>
 
   );
+  
+
 }
 
 export default PersonBio;
