@@ -31,7 +31,7 @@ function Home() {
             </Row>
           </Col>
           <Col className="text-center">
-            <img src={SSLogoImage} alt="Introduction Photo" className="rounded-circle" />
+            <img src={SSLogoImage} alt="Introduction Photo" className="rounded-circle larger-image" />
           </Col>
         </Row>
       </Container>
@@ -54,10 +54,24 @@ function Home() {
         </Container>
 
         {
-          personsBios.map((personBio) => (
-            <PersonBio key={personBio.id} personBioModel={personBio} />
+          personsBios.map((personBio, index) => (
+
+            index === 0 ? (
+              <PersonBio key={personBio.id} personBioModel={personBio} />
+            ) : (null)
           ))
         }
+
+        <Container className='mentor-list'>
+          {
+            personsBios.map((personBio, index) => (
+
+              index !== 0 ? (
+                <PersonBio key={personBio.id} personBioModel={personBio} />
+              ) : (null)
+            ))
+          }
+        </Container>
 
 
       </div>
