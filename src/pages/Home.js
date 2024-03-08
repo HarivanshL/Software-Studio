@@ -1,13 +1,16 @@
 //import {useState} from React
 import '../css-styling/Home.css';
-import React from 'react';
+
 import Navbar from './Navbar';
 import Linkbar from '../Components/Linkbar';
 import PersonBioService from '../lib/services/PersonBio.service';
 import PersonBio from "../Components/PersonBio";
 import { Container, Row, Col } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+
 import SSLogoImage from '../assets/ss-logo.png'
 import ScrollingCarousel from '../Components/ScrollingCarousel';
+
 
 function Home() {
   /** 
@@ -54,11 +57,7 @@ function Home() {
           </Row>
         </Container>
 
-
-        <PersonBio key={personsBios[0].id} personBioModel={personsBios[0]} />
-
-
-        {/*
+           {/*
         <Container className='mentor-list'>
           {
             personsBios.map((personBio, index) => (
@@ -68,15 +67,14 @@ function Home() {
               ) : (null)
             ))
           }
-
+ 
         </Container>
         */}
-        <Container className='carousel'>
-          <ScrollingCarousel items={personsBios} />
-        </Container>
+        <ScrollingCarousel  items={personsBios}/>
 
 
         
+
 
 
       </div>
