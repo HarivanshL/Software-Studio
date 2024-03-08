@@ -1,24 +1,39 @@
 .home-div1 {
     display: flex;
     align-items: center; /* Center items vertically */
+    justify-content: space-around;
+    padding-left: 7%;
+    width: 80%;
   }
   
   .container img {
     margin-right: 10px; /* Adjust margin as needed */
   }
   
-.home-container {
-    padding-top: 20px;
+  .home-container {
+    padding-top: 2%;
+
+}
+
+.intro-text {
+    width: 50%; /* Adjust the width as needed */
+    font-size: 16px; /* Adjust the font size as needed */
 }
 
 h1 {
-  text-align: center;
+
+  padding-left: 7%;
+  padding-right: 50%;
+  text-align: left;
+  font-family: sans-serif;
 }
 
 p {
-  font-size: 25px;
-  padding-left: 160px;
-  padding-right: 160px;
+  font-size: 16px;
+  font-family: sans-serif;
+  padding-left: 5%;
+  padding-right: 20%;
+  padding-bottom: 2%;
 
 }
 
@@ -71,8 +86,9 @@ p {
 
 /*bris stuff in progress*/
 
+/*inline-block*/
 .person-bio {
-  display: inline-block;
+  display: inline;
   width: calc(100% / 3);
   text-align: center;
   margin-bottom: 20px;
@@ -109,4 +125,11 @@ p {
   border-top: 2px solid black;
   width: 50%;
   margin: 20px auto; /* Adjust margin as needed */
+}
+
+.temp {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; /* Center items vertically */
+  justify-content: space-around;
 }

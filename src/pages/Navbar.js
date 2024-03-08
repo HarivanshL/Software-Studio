@@ -4,13 +4,14 @@ import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import '../css-styling/Navbar.css';
 import bannerImage from '../assets/images.jpeg'
+import oulogo from '../assets/ou-logo.png'
 
 const CustomNavbar = () => {
   return (
     <>
-      <div className="banner-container">
-        <img src={bannerImage} alt="Banner" className="banner-image" />
-        <div className="banner-text">Software Studio</div>
+      <div className="banner-container bg-white text-center py-4">
+        <img src = {oulogo} alt="OU-logo" classname ="OU-logo-image"/>
+        <h1 className="text-danger display-4" style={{ marginLeft: '150px' }}>Software Studio</h1>
       </div>
       <Navbar bg="crimson" variant="dark" className="navbar">
         <Container>
@@ -24,7 +25,13 @@ const CustomNavbar = () => {
           </Nav>
         </Container>
       </Navbar>
+
+      <div className="banner-container">
+        <img src={bannerImage} alt="Banner" className="banner-image" />
+      </div>
     </>
+
+
   );
 };
 
