@@ -20,15 +20,23 @@ function Home() {
   return (
     <>
       <Navbar />
-      <div className='home-container'>
-        <h1>Welcome to Software Studio</h1>
-        <div className='home-div1'>
-          <p>We're your gateway to hands-on training, portfolio building, and real-world experience in software development. Join our community to enhance your skills, boost your confidence, and prepare for success in the tech industry. Let's code the future together at Software Studio.</p>
-          <img src={SSLogoImage} alt="Introduction Photo" />
-        </div>
-        <div className='linkbar'>
-          <Linkbar />
-        </div>
+      <Container className="mt-4">
+        <Row className="my-auto">
+          <Col>
+            <Row>
+              <h1 className="h3">Welcome to Software Studio</h1>
+            </Row>
+            <Row>
+              <p>We're your gateway to hands-on training, portfolio building, and real-world experience in software development. Join our community to enhance your skills, boost your confidence, and prepare for success in the tech industry. Let's code the future together at Software Studio.</p>
+            </Row>
+          </Col>
+          <Col className="text-center">
+            <img src={SSLogoImage} alt="Introduction Photo" className="rounded-circle" />
+          </Col>
+        </Row>
+      </Container>
+      <div className='linkbar'>
+        <Linkbar />
 
         {/*FIXME holy moly this chunk below is bad*/}
         <Container>
@@ -45,7 +53,7 @@ function Home() {
           </Row>
         </Container>
 
-        {        
+        {
           personsBios.map((personBio) => (
             <PersonBio key={personBio.id} personBioModel={personBio} />
           ))
