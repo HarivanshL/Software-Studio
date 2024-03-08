@@ -2,9 +2,9 @@
 import '../css-styling/Home.css';
 import React from 'react';
 import Navbar from './Navbar';
-import Linkbar from '../components/Linkbar';
+import Linkbar from '../Components/Linkbar';
 import PersonBioService from '../lib/services/PersonBio.service';
-import PersonBio from "../components/PersonBio";
+import PersonBio from "../Components/PersonBio";
 import { Container, Row, Col } from 'react-bootstrap';
 import SSLogoImage from '../assets/ss-logo.png'
 
@@ -54,9 +54,9 @@ function Home() {
         </Container>
 
         {
-          personsBios.map((personBio, index) => (
+          personsBios.map((personBio) => (
 
-            index === 0 ? (
+            personBio.bio === "Leader" ? (
               <PersonBio key={personBio.id} personBioModel={personBio} />
             ) : (null)
           ))
@@ -66,7 +66,7 @@ function Home() {
           {
             personsBios.map((personBio, index) => (
 
-              index !== 0 ? (
+              personBio.bio !== "Leader" ? (
                 <PersonBio key={personBio.id} personBioModel={personBio} />
               ) : (null)
             ))
