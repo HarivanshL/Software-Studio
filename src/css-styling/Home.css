@@ -41,6 +41,8 @@ p {
 }
 
 .mentors {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center; /* Center items vertically */
   justify-content: space-around;
 }
@@ -60,4 +62,8 @@ p {
   background-color: black; 
   margin-left: 5%;
   margin-right: 5%;
+}
+
+.mentor {
+  text-align: center;
 }

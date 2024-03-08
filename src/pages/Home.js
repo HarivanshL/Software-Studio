@@ -5,6 +5,13 @@ import Navbar from './Navbar';
 import Linkbar from '../Components/Linkbar';
 
 function Home() {
+  /** 
+   * TODO:
+   * Add images and bios for mentors/professor
+   * Fix navbar/Main Image
+   * 
+  */
+
   return (
     <>
       <Navbar />
@@ -27,7 +34,26 @@ function Home() {
             <p>About him</p>
           </div>
           <div className='mentors'>
-
+            <div className='mentor'>
+              <h1>Safia Mesiya</h1>
+              <p>Bio</p>
+            </div>
+            <div className='mentor'>
+              <h1>Nick Thompson</h1>
+              <p>Bio</p>
+            </div>
+            <div className='mentor'>
+              <h1>Matthew Agron</h1>
+              <p>Bio</p>
+            </div>
+            <div className='mentor'>
+              <h1>Brianna Patten</h1>
+              <p>Bio</p>
+            </div>
+            <div className='mentor'>
+              <h1>Harivansh Luchmun</h1>
+              <p>Bio</p>
+            </div>
           </div>
         </div>
       </div>
