@@ -1,13 +1,12 @@
-
 :root {
   --OURed: #841617;
-  --OUWhite: #FDF9D8;
+  --OUWhite: #fdf9d8;
 }
 .banner-container {
-  position: relative; 
+  position: relative;
   width: 100%;
   height: auto;
-  background-color: #F8F7F0;
+  background-color: #f8f7f0;
 }
 
 .banner-text {
@@ -18,12 +17,11 @@
   font-size: 55px;
   font-weight: bold;
   color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-.OU-logo-image{
-  float:left;
-  width:10%;
+.OU-logo-image {
+  float: left;
+  height: 50px;
 }
 
 .banner-image {
@@ -34,27 +32,26 @@
 }
 
 .navbar {
-  background-color: var(--OURed); 
-  padding-top: 10px; 
-  padding-bottom: 10px; 
+  background-color: var(--OURed);
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .nav-link {
   color: white;
   margin-right: auto;
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 .login-button {
   color: var(--OURed);
-  background-color: white; 
-  border-color: white; 
-  font-weight: bold; 
-
+  background-color: white;
+  border-color: white;
+  font-weight: bold;
 }
 
 .login-button:hover {
-  color: white; 
-  background-color: var(--OURed); 
-  border-color: var(--OURed); 
+  color: white;
+  background-color: var(--OURed);
+  border-color: var(--OURed);
 }
