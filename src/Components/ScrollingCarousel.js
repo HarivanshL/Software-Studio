@@ -4,14 +4,16 @@ import tempImg from '../assets/sid.jpg'
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 const ScrollingCarousel = ({ items }) => {
+
   const chunkSize = 3;
   const groupedItems = [];
   
-  // Repeat the items array to create an endless loop effect
-  const repeatedItems = items.concat(items).concat(items);
+  const itemsToShow = items.slice(1);
+  const repeatedItems = itemsToShow.concat(itemsToShow).concat(itemsToShow);
+
 
   for (let i = 0; i < repeatedItems.length; i += chunkSize) {
     groupedItems.push(repeatedItems.slice(i, i + chunkSize));
@@ -24,10 +26,10 @@ const ScrollingCarousel = ({ items }) => {
           <div key={index} className="carousel-item">
             {chunk.map((person, i) => (
               <div key={i}>
-                <img src={person.image} alt="mentor-image" className="rounded-circle mb-2" style={{ width: '90px', height: '90px' }} />
+                <img src={person.image} alt="mentor-image" className="rounded-circle mb-2" style={{ width: '180px', height: '180px' }} />
                 <div>
-                  <h3 style ={{fontStyle: 'italic', fontWeight: 'bold', fontSize: '1.1rem'}}>{person.name}</h3>
-                  <p  style ={{fontStyle: 'italic', fontSize: '1rem'}} >{person.bio}</p>
+                  <h3 className = "fw-bold fst-italic" style ={{ fontSize: '1.3rem'}}>{person.name}</h3>
+                  <p  className = "fst-italic" style ={{fontSize: '1,1rem'}} >{person.bio}</p>
                 </div>
               </div>
             ))}

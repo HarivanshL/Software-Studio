@@ -1,24 +1,26 @@
 body.custom-bg {
-  background-color: #fdf9d8; /* Set the desired background color */
+  background-color: #fdf9d8;
 }
 
 h1 {
   text-align: left;
   font-family: "Times New Roman", Times, serif;
 }
-
+h2{
+  font-family: "Times New Roman", Times, serif;
+}
 p {
   font-size: 18px;
   font-family: sans-serif;
 }
 .larger-image {
-  width: 200px; /* Adjust the width as needed */
+  width: 200px; 
 }
 
 .horizontal-line {
   border-top: 2px solid black;
   width: 50%;
-  margin: 20px auto; /* Adjust margin as needed */
+  margin: 20px auto;
 }
 .carousel {
   width: 100%;
@@ -30,7 +32,7 @@ p {
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  padding: 20px;
+  
 }
 
 .carousel .carousel-item > div {
@@ -38,23 +40,14 @@ p {
   text-align: center;
 }
 
-.carousel .carousel-item img.rounded-circle.smaller-circle {
-  width: 70px; /* Adjust the width and height as needed */
-  height: 70px; /* Adjust the width and height as needed */
-}
-
 .carousel .carousel-item h3 {
-  font-size: 1rem; /* Adjust the font size as needed */
-  margin-bottom: 5px;
+  font-size: 1rem; 
+
   text-align: center;
 }
 
 .carousel .carousel-item p {
-  font-size: 0.9rem; /* Adjust the font size as needed */
-  margin-bottom: 10px;
+  font-size: 0.9rem;
   text-align: center;
 }
-.carousel-title {
-  font-size: 1rem; /* Adjust the font size as needed */
-  text-align: center;
-}
+

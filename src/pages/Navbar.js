@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
+import "bootstrap/dist/css/bootstrap.min.css"; 
 import "../css-styling/Navbar.css";
 import bannerImage from "../assets/images.jpeg";
 import oulogo from "../assets/ou-logo.png";
@@ -12,7 +12,7 @@ const CustomNavbar = () => {
       <div className="banner-container text-center py-1">
         <div>
           <img src={oulogo} alt="OU-logo" className="OU-logo-image" />
-          <h1 className="text-danger display-4" style={{ marginLeft: "150px" }}>
+          <h1 className="text-danger display-4 ms-5">
             Software Studio
           </h1>
         </div>

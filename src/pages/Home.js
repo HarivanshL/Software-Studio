@@ -29,7 +29,7 @@ function Home() {
             className="ms-5 d-flex flex-column justify-content-center"
           >
             <Row>
-              <h1 className="h3 p-2 mt-4 ms-5 mb-0">
+              <h1 className="h3 p-2 mt-2 ms-5 mb-0">
                 Welcome to Software Studio
               </h1>
             </Row>
@@ -67,7 +67,6 @@ function Home() {
                   whiteSpace: "nowrap",
                   overflow: "hidden",
                   textOverflow: "ellipsis",
-                  fontSize: "1.7rem",
                   margin: "0",
                 }}
               >
@@ -92,21 +91,17 @@ function Home() {
                   src={personBio.image}
                   alt={personBio.name}
                   className="photo rounded-circle mb-1"
-                  style={{ width: "90px", height: "90px" }}
+                  style={{ width: "180px", height: "180px" }}
                 />
                 <div
-                  className="name"
-                  style={{
-                    fontStyle: "italic",
-                    fontSize: "1.1rem",
-                    fontWeight: "bold",
-                  }}
+                  className="name fw-bold fst-italic"
+                  style={{ fontSize: "1.2rem" }}
                 >
                   {personBio.name}
                 </div>
                 <div
-                  className="bio"
-                  style={{ fontStyle: "italic", fontSize: "1rem" }}
+                  className="bio fst-italic"
+                  style={{ fontSize: "1.1rem" }}
                 >
                   {personBio.bio}
                 </div>
@@ -115,15 +110,15 @@ function Home() {
           )}
 
           <h2
-            className="carousel-title text-light"
-            style={{ fontWeight: "bold", fontSize: "1.2rem" }}
+            className="text-center text-light mt-5 fw-bold"
+            style={{ fontSize: "1.5rem" }}
           >
             Mentors
           </h2>
           <ScrollingCarousel items={personsBios} />
           <h2
-            className="carousel-title text-light mt-4"
-            style={{ fontWeight: "bold", fontSize: "1.2rem" }}
+            className="text-center text-light mt-5 fw-bold"
+            style={{ fontSize: "1.5rem" }}
           >
             Exec Team
           </h2>
