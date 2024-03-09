@@ -1,4 +1,6 @@
 import '../css-styling/App.css';
+import LoginForm from '../components/LoginForm';
+import { Navbar, Container } from 'react-bootstrap';
 
 
 async function authenticate() {
@@ -7,15 +9,14 @@ async function authenticate() {
 
 function Login() {
   return (
-    <div className="container">
-        <form onSubmit={this.handleSubmit}>
-        <label>
-          Name:
-          <input> </input>
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
-    </div>
+    <>
+      <Navbar />
+
+      <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <LoginForm />
+      </Container>
+
+    </>
   );
 }
 

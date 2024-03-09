@@ -1,5 +1,5 @@
 import React from 'react'
-import Form from '../components/ContactForm'
+import ContactForm from '../components/ContactForm'
 import '../css-styling/Contact.css'
 import { Navbar, Container} from 'react-bootstrap'
 function Contact() {
@@ -15,7 +15,7 @@ function Contact() {
                 </p>
             </Container>
 
-            <Form />
+            <ContactForm />
 
         </>
     )
