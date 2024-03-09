@@ -4,6 +4,7 @@ import './css-styling/App.css';
 import React from "react";
 import Home from './pages/Home'
 import Navbar from './pages/Navbar'
+import Contact from './pages/Contact';
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
   <>
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Contact />} />
       </Routes>
 
     </Router>
