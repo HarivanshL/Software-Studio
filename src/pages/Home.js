@@ -23,18 +23,18 @@ function Home() {
   return (
     <>
       <Navbar />
-      <Container className="mt-4" style ={{backgroundColor: "#FDF9D8"}}>
+      <Container fluid className="mt-0" style={{ backgroundColor: "#F8F7F0" }}>
         <Row className="my-auto">
           <Col>
             <Row>
-              <h1 className="h3 p-2">Welcome to Software Studio</h1>
+              <h1 className="h3 p-2 mt-4 ms-5">Welcome to Software Studio</h1>
             </Row>
             <Row>
-              <p>We're your gateway to hands-on training, portfolio building, and real-world experience in software development. Join our community to enhance your skills, boost your confidence, and prepare for success in the tech industry. Let's code the future together at Software Studio.</p>
+              <p className="p-2 ms-5">We're your gateway to hands-on training, portfolio building, and real-world experience in software development. Join our community to enhance your skills, boost your confidence, and prepare for success in the tech industry. Let's code the future together at Software Studio.</p>
             </Row>
           </Col>
           <Col className="text-center">
-            <img src={SSLogoImage} alt="Introduction Photo" className="rounded-circle larger-image mb-4" />
+            <img src={SSLogoImage} alt="Introduction Photo" className="rounded-circle larger-image mt-4 mb-4 ms-4" />
           </Col>
         </Row>
       </Container>
@@ -42,8 +42,8 @@ function Home() {
         <Linkbar />
 
         {/*FIXME holy moly this chunk below is bad*/}
-        <Container style ={{backgroundColor: "gray"}}>
-          <Row className="align-items-center mt-3">
+        <Container fluid style={{ backgroundColor: "#5E5E5E" }}>
+          <Row className="align-items-center">
             <Col xs={4} className="d-flex justify-content-end">
               <hr style={{ width: '50%' }} />
             </Col>
@@ -56,24 +56,24 @@ function Home() {
           </Row>
         </Container>
 
-           {/*
-        <Container className='mentor-list'>
-          {
-            personsBios.map((personBio, index) => (
+        <Container fluid style={{ backgroundColor: "#5E5E5E" }}>
+        {
+            personsBios.map((personBio, index) => (
 
-              personBio.bio !== "Leader" ? (
-                <PersonBio key={personBio.id} personBioModel={personBio} />
-              ) : (null)
-            ))
-          }
- 
+              personBio.bio === "Leader" ? (
+                <PersonBio key={personBio.id} personBioModel={personBio} />
+              ) : (null)
+            ))
+          }
+
+
+        <h2 className="carousel-title" >Mentors</h2>
+        <ScrollingCarousel items={personsBios} />
+        <h2 className="carousel-title">Exec Team</h2>
+        <ScrollingCarousel items={personsBios} />
         </Container>
-        */}
-        <ScrollingCarousel  items={personsBios}/>
-        <ScrollingCarousel  items={personsBios}/>
 
 
-        
 
 
 

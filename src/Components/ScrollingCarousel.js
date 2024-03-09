@@ -18,7 +18,7 @@ const ScrollingCarousel = ({ items }) => {
   }
 
   return (
-    <Container>
+    <Container fluid style={{ backgroundColor: "#5E5E5E" }}>
       <Carousel autoPlay infiniteLoop showThumbs={false} centerMode={true} interval={3000} className="carousel" showArrows={true} showStatus={false} showIndicators={false}>
         {groupedItems.map((chunk, index) => (
           <div key={index} className="carousel-item">

@@ -13,8 +13,6 @@ const PersonBio = ({ personBioModel }) => {
     </div>
 
   );
-  
-
 }
 
 export default PersonBio;
