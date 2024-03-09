@@ -9,7 +9,7 @@ import oulogo from '../assets/ou-logo.png'
 const CustomNavbar = () => {
   return (
     <>
-      <div className="banner-container bg-white text-center py-4">
+      <div className="banner-container text-center py-1">
         <img src = {oulogo} alt="OU-logo" classname ="OU-logo-image"/>
         <h1 className="text-danger display-4" style={{ marginLeft: '150px' }}>Software Studio</h1>
       </div>

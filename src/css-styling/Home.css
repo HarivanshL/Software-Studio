@@ -1,152 +1,26 @@
-.home-div1 {
-    display: flex;
-    align-items: center; /* Center items vertically */
-    justify-content: space-around;
-    padding-left: 8%;
-    width: 80%;
-  }
-  
-  .container img {
-    margin-left: 120px; /* Adjust margin as needed */
-    padding-bottom: 5%;
 
-  }
-
-  .home-container {
-    padding-top: 2%;
-
-}
-
-
-
-.intro-text {
-    width: 50%; /* Adjust the width as needed */
-    font-size: 16px; /* Adjust the font size as needed */
+body.custom-bg {
+  background-color: #FDF9D8; /* Set the desired background color */
 }
 
 h1 {
-  margin-left: 55px;
-  padding-left: 7%;
-  padding-right: 50%;
   text-align: left;
   font-family: sans-serif;
 }
 
 p {
-  margin-left: 55px;
   font-size: 18px;
   font-family: sans-serif;
-  padding-left: 5%;
-  padding-right: 10%;
-  padding-bottom: 2%;
 
 }
 .larger-image {
   width: 200px; /* Adjust the width as needed */
 }
 
-.team {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  align-items: center; /* Center items vertically */
-  text-align: center;
-}
-
-.proffesor {
-  padding-top: 50px;
-}
-
-.proffesor h3 {
-  font-size: 30px;
-}
-.proffesor p {
-  font-size: 25px;
-}
-
-.mentors {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center; /* Center items vertically */
-  justify-content: space-around;
-}
-
-.mentor-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-
-.page-break {
-  display: flex; /* Use flexbox */
-  align-items: center; 
-  justify-content: center; 
-  flex-wrap: wrap; /* Allow items to wrap if necessary */
-  gap: 20px; /* Add spacing between items */
-}
-
-.break-line {
-  flex: 1;
-  border: none; 
-  height: 3px; 
-  background-color: black; 
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-.mentor {
-  text-align: center;
-}
-
-
-/*bris stuff in progress*/
-
-/*inline-block*/
-.person-bio {
-  display: inline;
-  width: calc(100% / 3);
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.photo-container {
-  width: 100px; /* Adjust as needed */
-  height: 100px; /* Adjust as needed */
-  border-radius: 50%; /* This will make the photo circular */
-  overflow: hidden;
-  margin: 0 auto;
-}
-
-.photo {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-}
-
-.name {
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-.bio {
-  margin-top: 5px;
-}
-
-.team-section {
-  text-align: center;
-}
-
 .horizontal-line {
   border-top: 2px solid black;
   width: 50%;
   margin: 20px auto; /* Adjust margin as needed */
-}
-
-.temp {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center; /* Center items vertically */
-  justify-content: space-around;
 }
 .carousel {
   width: 100%;
@@ -163,13 +37,12 @@ p {
 
 .carousel .carousel-item > div {
   flex: 1;
+  text-align: center;
 }
 
-.carousel .carousel-item img {
-  width: 70px; /* Adjust the image size as needed */
-  height: 70px; /* Adjust the image size as needed */
-  border-radius: 50%;
-  margin-right: 20px; /* Add some space between image and text */
+.carousel .carousel-item img.rounded-circle.smaller-circle {
+  width: 70px; /* Adjust the width and height as needed */
+  height: 70px; /* Adjust the width and height as needed */
 }
 
 .carousel .carousel-item h3 {
@@ -181,7 +54,5 @@ p {
 .carousel .carousel-item p {
   font-size: 0.9rem; /* Adjust the font size as needed */
   margin-bottom: 10px;
-
   text-align: center;
-  
 }

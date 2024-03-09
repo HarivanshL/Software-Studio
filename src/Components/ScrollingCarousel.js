@@ -24,7 +24,7 @@ const ScrollingCarousel = ({ items }) => {
           <div key={index} className="carousel-item">
             {chunk.map((person, i) => (
               <div key={i}>
-                <img src={person.image} alt="mentor-image" />
+                <img src={person.image} alt="mentor-image" className="rounded-circle smaller-circle mb-2" />
                 <div>
                   <h3>{person.name}</h3>
                   <p>{person.bio}</p>
@@ -37,7 +37,5 @@ const ScrollingCarousel = ({ items }) => {
     </Container>
   );
 };
-
-
 
 export default ScrollingCarousel;

@@ -7,7 +7,6 @@ import PersonBioService from '../lib/services/PersonBio.service';
 import PersonBio from "../Components/PersonBio";
 import { Container, Row, Col } from 'react-bootstrap';
 import React, { useState, useEffect } from 'react';
-
 import SSLogoImage from '../assets/ss-logo.png'
 import ScrollingCarousel from '../Components/ScrollingCarousel';
 
@@ -24,18 +23,18 @@ function Home() {
   return (
     <>
       <Navbar />
-      <Container className="mt-4">
+      <Container className="mt-4" style ={{backgroundColor: "#FDF9D8"}}>
         <Row className="my-auto">
           <Col>
             <Row>
-              <h1 className="h3">Welcome to Software Studio</h1>
+              <h1 className="h3 p-2">Welcome to Software Studio</h1>
             </Row>
             <Row>
               <p>We're your gateway to hands-on training, portfolio building, and real-world experience in software development. Join our community to enhance your skills, boost your confidence, and prepare for success in the tech industry. Let's code the future together at Software Studio.</p>
             </Row>
           </Col>
           <Col className="text-center">
-            <img src={SSLogoImage} alt="Introduction Photo" className="rounded-circle larger-image" />
+            <img src={SSLogoImage} alt="Introduction Photo" className="rounded-circle larger-image mb-4" />
           </Col>
         </Row>
       </Container>
@@ -43,8 +42,8 @@ function Home() {
         <Linkbar />
 
         {/*FIXME holy moly this chunk below is bad*/}
-        <Container>
-          <Row className="align-items-center">
+        <Container style ={{backgroundColor: "gray"}}>
+          <Row className="align-items-center mt-3">
             <Col xs={4} className="d-flex justify-content-end">
               <hr style={{ width: '50%' }} />
             </Col>
@@ -70,6 +69,7 @@ function Home() {
  
         </Container>
         */}
+        <ScrollingCarousel  items={personsBios}/>
         <ScrollingCarousel  items={personsBios}/>
 
 
