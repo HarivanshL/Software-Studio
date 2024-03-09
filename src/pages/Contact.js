@@ -1,14 +1,20 @@
 import React from 'react'
 import Form from '../components/ContactForm'
-import { Navbar } from 'react-bootstrap'
+import '../css-styling/Contact.css'
+import { Navbar, Container} from 'react-bootstrap'
 function Contact() {
 
-  return (
-    <>
-        <Navbar/>
-        <Form/>
-    </>
-  )
+    return (
+        <>
+            <Navbar />
+            <div className='container1'>
+                <h1>Contact us</h1>
+                <p>We are happy to address and concerns or thoughts you would like to share with us</p>
+            </div>
+            <Form />
+
+        </>
+    )
 }
 
 export default Contact
