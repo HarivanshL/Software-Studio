@@ -19,15 +19,15 @@ const ScrollingCarousel = ({ items }) => {
 
   return (
     <Container fluid style={{ backgroundColor: "#5E5E5E" }}>
-      <Carousel autoPlay infiniteLoop showThumbs={false} centerMode={true} interval={3000} className="carousel" showArrows={true} showStatus={false} showIndicators={false}>
+      <Carousel autoPlay infiniteLoop showThumbs={false} centerMode={true} interval={3000} className="carousel text-light" showArrows={true} showStatus={false} showIndicators={false}>
         {groupedItems.map((chunk, index) => (
           <div key={index} className="carousel-item">
             {chunk.map((person, i) => (
               <div key={i}>
-                <img src={person.image} alt="mentor-image" className="rounded-circle smaller-circle mb-2" />
+                <img src={person.image} alt="mentor-image" className="rounded-circle mb-2" style={{ width: '90px', height: '90px' }} />
                 <div>
-                  <h3>{person.name}</h3>
-                  <p>{person.bio}</p>
+                  <h3 style ={{fontStyle: 'italic', fontWeight: 'bold', fontSize: '1.1rem'}}>{person.name}</h3>
+                  <p  style ={{fontStyle: 'italic', fontSize: '1rem'}} >{person.bio}</p>
                 </div>
               </div>
             ))}

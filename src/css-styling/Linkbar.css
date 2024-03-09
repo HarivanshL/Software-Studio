@@ -3,8 +3,8 @@
     display: flex;
     align-items: center; /* Center items vertically */
     justify-content: space-around; /* Centers items horizontally */
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
 }
 .button {
@@ -20,3 +20,7 @@
     background-color: white;
     color: #841617;
   }
+  .fixed-width {
+    width: 100%;
+    max-width: 175px; /* Adjust as needed */
+}
