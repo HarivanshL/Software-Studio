@@ -4,13 +4,13 @@ import tempImg from '../assets/sid.jpg'
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-import 'bootstrap/dist/css/bootstrap.min.css'; 
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ScrollingCarousel = ({ items }) => {
 
   const chunkSize = 3;
   const groupedItems = [];
-  
+
   const itemsToShow = items.slice(1);
   const repeatedItems = itemsToShow.concat(itemsToShow).concat(itemsToShow);
 
@@ -27,9 +27,10 @@ const ScrollingCarousel = ({ items }) => {
             {chunk.map((person, i) => (
               <div key={i}>
                 <img src={person.image} alt="mentor-image" className="rounded-circle mb-2" style={{ width: '180px', height: '180px' }} />
+ 
                 <div>
-                  <h3 className = "fw-bold fst-italic" style ={{ fontSize: '1.3rem'}}>{person.name}</h3>
-                  <p  className = "fst-italic" style ={{fontSize: '1,1rem'}} >{person.bio}</p>
+                  <h3 className="fst-italic" style={{ fontSize: '1.3rem' }}>{person.name}</h3>
+                  <p className="fst-italic fw-lighter" style={{ fontSize: '1,1rem' }} >{person.bio}</p>
                 </div>
               </div>
             ))}

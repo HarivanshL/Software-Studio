@@ -3,12 +3,12 @@ import sidImage from "../../assets/sid.jpg";
 
 
 const getAllPersonBios = () => {
-    const person1 = new PersonBioModel("teddy", "poop", sidImage);
-    const person2 = new PersonBioModel("pp", "haha", sidImage);
-    const person3 = new PersonBioModel("harivansh", "sucks bad", sidImage);
-    const person4 = new PersonBioModel("binky", "sucks very bad", sidImage);
-    const person5 = new PersonBioModel("nickolasss", "not so bad", sidImage);
-    const person6 = new PersonBioModel("noah", "ok", sidImage);
+    const person1 = new PersonBioModel("Nick", "bio", sidImage);
+    const person2 = new PersonBioModel("Bri", "bio", sidImage);
+    const person3 = new PersonBioModel("Harivansh", "bio", sidImage);
+    const person4 = new PersonBioModel("Noah", "bio", sidImage);
+    const person5 = new PersonBioModel("Matthew", "bio", sidImage);
+    const person6 = new PersonBioModel("Safia", "Bio", sidImage);
     const person0 = new PersonBioModel("Mansoor Abdulak", "Leader", sidImage);
 
 

@@ -6,9 +6,7 @@ h1 {
   text-align: left;
   font-family: "Times New Roman", Times, serif;
 }
-h2{
-  font-family: "Times New Roman", Times, serif;
-}
+
 p {
   font-size: 18px;
   font-family: sans-serif;
@@ -51,3 +49,11 @@ p {
   text-align: center;
 }
 
+.white-square {
+  width: 200px; /* Adjust the width according to your design */
+  height: 200px; /* Adjust the height according to your design */
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

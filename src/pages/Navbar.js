@@ -11,15 +11,15 @@ const CustomNavbar = () => {
     <>
       <div className="banner-container text-center py-1">
         <div>
-          <img src={oulogo} alt="OU-logo" className="OU-logo-image" />
-          <h1 className="text-danger display-4 ms-5">
+          <img src={oulogo} alt="OU-logo" className="OU-logo-image ms-5 me-4" />
+          <h1 className="display-4 ms-5">
             Software Studio
           </h1>
         </div>
       </div>
       <Navbar bg="crimson" variant="dark" className="navbar">
         <Container>
-          <Nav className="me-auto">
+          <Nav className="me-auto ms-5">
             <Nav.Link as={Link} to="/" className="nav-link">
               Home
             </Nav.Link>
@@ -35,7 +35,7 @@ const CustomNavbar = () => {
               as={Link}
               to="/login"
               variant="light"
-              className="login-button"
+              className="login-button me-5"
             >
               Login
             </Button>

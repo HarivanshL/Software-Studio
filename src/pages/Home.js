@@ -43,11 +43,11 @@ function Home() {
               </p>
             </Row>
           </Col>
-          <Col md={4} className="text-end p-2 me-5">
+          <Col md={4} className="text-end p-2">
             <img
               src={SSLogoImage}
               alt="Introduction Photo"
-              className="rounded-circle larger-image mt-4 mb-4 ms-4 me-5"
+              className="rounded-circle larger-image mt-4 mb-4 ms-4"
             />
           </Col>
         </Row>
@@ -61,7 +61,7 @@ function Home() {
             <Col xs={4} className="d-flex justify-content-end text-light">
               <hr style={{ width: "80%", borderWidth: "3px" }} />
             </Col>
-            <Col xs={4} className="text-center mt-4 mb-4 text-light">
+            <Col xs={4} className=" text-center mt-4 mb-4 text-light">
               <h2
                 style={{
                   whiteSpace: "nowrap",
@@ -94,13 +94,13 @@ function Home() {
                   style={{ width: "180px", height: "180px" }}
                 />
                 <div
-                  className="name fw-bold fst-italic"
+                  className="name fst-italic"
                   style={{ fontSize: "1.2rem" }}
                 >
                   {personBio.name}
                 </div>
                 <div
-                  className="bio fst-italic"
+                  className="bio fst-italic fw-lighter"
                   style={{ fontSize: "1.1rem" }}
                 >
                   {personBio.bio}
@@ -110,14 +110,14 @@ function Home() {
           )}
 
           <h2
-            className="text-center text-light mt-5 fw-bold"
+            className="text-center text-light mt-5"
             style={{ fontSize: "1.5rem" }}
           >
             Mentors
           </h2>
           <ScrollingCarousel items={personsBios} />
           <h2
-            className="text-center text-light mt-5 fw-bold"
+            className="text-center text-light mt-5"
             style={{ fontSize: "1.5rem" }}
           >
             Exec Team
