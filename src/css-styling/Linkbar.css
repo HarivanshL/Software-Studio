@@ -1,0 +1,26 @@
+.buttons {
+    background-color: #841617;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-around; /* Centers items horizontally */
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+.button {
+    background-color: #841617;
+    border: 2px solid white;
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: white;
+    color: #841617;
+  }
+  .fixed-width {
+    width: 100%;
+    max-width: 175px; /* Adjust as needed */
+}

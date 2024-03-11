@@ -1,0 +1,40 @@
+body.custom-bg {
+  background-color: #fdf9d8;
+}
+
+h1 {
+  text-align: left;
+  font-family: "Times New Roman", Times, serif;
+}
+
+p {
+  font-size: 18px;
+  font-family: sans-serif;
+}
+.larger-image {
+  width: 200px; 
+}
+
+.horizontal-line {
+  border-top: 2px solid black;
+  width: 50%;
+  margin: 20px auto;
+}
+
+
+.carousel .carousel-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  
+}
+.red-square {
+  width: 180px;
+  height: 180px;
+  background-color: #841617;
+  z-index: -1;
+}
+.carousel .red-square{
+  transform: translate(-50%, -20%);
+}

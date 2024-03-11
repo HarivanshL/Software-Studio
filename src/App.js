@@ -4,6 +4,7 @@ import './css-styling/App.css';
 import React from "react";
 import Home from './pages/Home'
 import Navbar from './pages/Navbar'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Contact from './pages/Contact';
 
 
