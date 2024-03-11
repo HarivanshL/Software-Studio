@@ -82,7 +82,9 @@ function Home() {
         <Container fluid style={{ backgroundColor: "#5E5E5E" }}>
           {personsBios.map((personBio, index) =>
             personBio.bio === "Leader" ? (
+              
               <div
+            
                 key={personBio.id}
                 className="person-bio text-center text-light mb-5"
                 style={{ marginBottom: "1rem" }}
@@ -93,6 +95,7 @@ function Home() {
                   className="photo rounded-circle mb-1"
                   style={{ width: "180px", height: "180px" }}
                 />
+
                 <div
                   className="name fst-italic"
                   style={{ fontSize: "1.2rem" }}
@@ -105,9 +108,11 @@ function Home() {
                 >
                   {personBio.bio}
                 </div>
+
               </div>
             ) : null
           )}
+          
 
           <h2
             className="text-center text-light mt-5"
