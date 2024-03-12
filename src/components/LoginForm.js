@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function ContactForm() {
+function LoginForm() {
   const sendData = () => {
     // Function to handle form submission
   };
@@ -12,12 +12,12 @@ function ContactForm() {
       <Form className='container'>
         <Form.Group controlId="formEmail">
           <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" required />
+          <Form.Control type="email" required />
         </Form.Group>
 
         <Form.Group controlId="formMessage">
-          <Form.Label>Message</Form.Label>
-          <Form.Control as="textarea" rows={3} placeholder="Enter your message" required />
+          <Form.Label>Password</Form.Label>
+          <Form.Control as="textarea" rows={3} required />
         </Form.Group>
 
         <Button variant="primary" type="button" onClick={sendData}>
@@ -28,4 +28,4 @@ function ContactForm() {
   );
 }
 
-export default ContactForm;
+export default LoginForm;
