@@ -3,6 +3,7 @@ import ContactForm from '../components/ContactForm'
 import '../css-styling/Contact.css'
 import { Navbar, Container} from 'react-bootstrap'
 import CustomNavbar from '../components/Navbar'
+import Linkbar from '../components/Linkbar'
 function Contact() {
 
     return (
@@ -15,7 +16,7 @@ function Contact() {
                     Feel free to check out our FAQ page. {/**Insert FAQ hyperlink or Linbar component */}
                 </p>
             </Container>
-
+            <Linkbar linkNames={["FAQ"]}/>
             <ContactForm />
 
         </>
