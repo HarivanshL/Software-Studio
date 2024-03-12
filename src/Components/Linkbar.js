@@ -1,12 +1,14 @@
 import React from 'react'
 import '../css-styling/Linkbar.css'
-
-const Linkbar = ({linkNames}) =>{
+import { NavLink } from 'react-router-dom'
+const Linkbar = ({links}) =>{
   return (
     <div className="buttons row text-center">
-    {linkNames.map((text, index) => (
+    {links.map((link, index) => (
         <div className="col-md-4" key={index}>
-            <button className="button btn-block fixed-width">{text}</button>
+          <NavLink className="button btn-block fixed-width" to={link.route} style={{textDecoration: "none;"}}>
+            {link.name}
+          </NavLink>
         </div>
     ))}
 </div>

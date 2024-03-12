@@ -6,6 +6,9 @@ import CustomNavbar from '../components/Navbar'
 import Linkbar from '../components/Linkbar'
 function Contact() {
 
+    const links = [
+        { name: "FAQ", route: "/" },
+      ];
     return (
         <>
             <CustomNavbar />
@@ -16,7 +19,7 @@ function Contact() {
                     Feel free to check out our FAQ page. {/**Insert FAQ hyperlink or Linbar component */}
                 </p>
             </Container>
-            <Linkbar linkNames={["FAQ"]}/>
+            <Linkbar links={links}/>
             <ContactForm />
 
         </>

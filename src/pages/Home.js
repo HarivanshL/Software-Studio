@@ -19,6 +19,13 @@ function Home() {
    * Fix navbar/Main Image
    *
    */
+  const links = [
+    { name: "Home", route: "/" },
+    { name: "About", route: "/about" },
+    { name: "Contact", route: "/contact" },
+  ];
+  
+  
 
   const personsBios = PersonBioService.getAllPersonBios();
   return (
@@ -58,7 +65,7 @@ function Home() {
         </Row>
       </Container>
       <div className="linkbar">
-        <Linkbar linkNames = {["Join Our Team", "Info", "FAQ"]}/>
+        <Linkbar links = {links}/>
 
         {/*FIXME holy moly this chunk below is bad*/}
         <Container fluid style={{ backgroundColor: "#5E5E5E" }}>
