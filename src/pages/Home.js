@@ -1,7 +1,7 @@
 //import {useState} from React
 import "../css-styling/Home.css";
 
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
 import Linkbar from "../components/Linkbar";
 import PersonBioService from "../lib/services/PersonBio.service";
 import PersonBio from "../components/PersonBio";
@@ -9,6 +9,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 import SSLogoImage from "../assets/ss-logo.png";
 import ScrollingCarousel from "../components/ScrollingCarousel";
+import bannerImage from "../assets/images.jpeg";
+
 
 function Home() {
   /**
@@ -22,6 +24,9 @@ function Home() {
   return (
     <>
       <Navbar />
+      <div className="banner-container">
+        <img src={bannerImage} alt="Banner" className="banner-image" />
+      </div>
       <Container fluid style={{ backgroundColor: "#F8F7F0" }}>
         <Row className="my-auto px-5">
           <Col

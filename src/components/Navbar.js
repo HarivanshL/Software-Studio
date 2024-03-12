@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css"; 
 import "../css-styling/Navbar.css";
-import bannerImage from "../assets/images.jpeg";
 import oulogo from "../assets/ou-logo.png";
 
 const CustomNavbar = () => {
@@ -43,9 +42,7 @@ const CustomNavbar = () => {
         </Container>
       </Navbar>
 
-      <div className="banner-container">
-        <img src={bannerImage} alt="Banner" className="banner-image" />
-      </div>
+
     </>
   );
 };

@@ -1,8 +1,7 @@
 import '../css-styling/App.css';
 import LoginForm from '../components/LoginForm';
 import { Navbar, Container } from 'react-bootstrap';
-
-
+import CustomNavbar from '../components/Navbar'
 async function authenticate() {
 
 }
@@ -10,8 +9,7 @@ async function authenticate() {
 function Login() {
   return (
     <>
-      <Navbar />
-
+      <CustomNavbar />
       <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <LoginForm />
       </Container>
