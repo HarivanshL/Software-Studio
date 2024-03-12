@@ -2,13 +2,13 @@
 import "../css-styling/Home.css";
 
 import Navbar from "./Navbar";
-import Linkbar from "../Components/Linkbar";
+import Linkbar from "../components/Linkbar";
 import PersonBioService from "../lib/services/PersonBio.service";
-import PersonBio from "../Components/PersonBio";
+import PersonBio from "../components/PersonBio";
 import { Container, Row, Col } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 import SSLogoImage from "../assets/ss-logo.png";
-import ScrollingCarousel from "../Components/ScrollingCarousel";
+import ScrollingCarousel from "../components/ScrollingCarousel";
 
 function Home() {
   /**
