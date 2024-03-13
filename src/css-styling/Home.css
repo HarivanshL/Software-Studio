@@ -1,3 +1,4 @@
+
 body.custom-bg {
   background-color: #fdf9d8;
 }
@@ -21,8 +22,9 @@ p {
   margin: 20px auto;
 }
 
-
 .carousel .carousel-item {
+  padding-top: 2%;
+  padding-bottom: 2%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -30,11 +32,12 @@ p {
   
 }
 .red-square {
-  width: 180px;
-  height: 180px;
+  width: 110%;
+  height: 110%;
   background-color: #841617;
+  border-radius: 20px; 
   z-index: -1;
 }
 .carousel .red-square{
-  transform: translate(-50%, -20%);
+  transform: translate(-50%, -50%);
 }
