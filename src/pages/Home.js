@@ -4,28 +4,18 @@ import "../css-styling/Home.css";
 import Navbar from "../components/Navbar";
 import Linkbar from "../components/Linkbar";
 import PersonBioService from "../lib/services/PersonBio.service";
-import PersonBio from "../components/PersonBio";
 import { Container, Row, Col } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 import SSLogoImage from "../assets/ss-logo.png";
 import ScrollingCarousel from "../components/ScrollingCarousel";
 import bannerImage from "../assets/images.jpeg";
 
-
 function Home() {
-  /**
-   * TODO:
-   * Add images and bios for mentors/professor
-   * Fix navbar/Main Image
-   *
-   */
   const links = [
     { name: "Home", route: "/" },
     { name: "About", route: "/about" },
     { name: "Contact", route: "/contact" },
   ];
-  
-  
 
   const personsBios = PersonBioService.getAllPersonBios();
   return (
@@ -65,7 +55,7 @@ function Home() {
         </Row>
       </Container>
       <div className="linkbar">
-        <Linkbar links = {links}/>
+        <Linkbar links={links} />
 
         {/*FIXME holy moly this chunk below is bad*/}
         <Container fluid style={{ backgroundColor: "#5E5E5E" }}>
@@ -94,9 +84,7 @@ function Home() {
         <Container fluid style={{ backgroundColor: "#5E5E5E" }}>
           {personsBios.map((personBio, index) =>
             personBio.bio === "Leader" ? (
-              
               <div
-            
                 key={personBio.id}
                 className="person-bio text-center text-light mb-5"
                 style={{ marginBottom: "1rem" }}
@@ -108,10 +96,7 @@ function Home() {
                   style={{ width: "180px", height: "180px" }}
                 />
 
-                <div
-                  className="name fst-italic"
-                  style={{ fontSize: "1.2rem" }}
-                >
+                <div className="name fst-italic" style={{ fontSize: "1.2rem" }}>
                   {personBio.name}
                 </div>
                 <div
@@ -120,11 +105,9 @@ function Home() {
                 >
                   {personBio.bio}
                 </div>
-
               </div>
             ) : null
           )}
-          
 
           <h2
             className="text-center text-light mt-5"
@@ -141,6 +124,9 @@ function Home() {
           </h2>
           <ScrollingCarousel items={personsBios} />
         </Container>
+      </div>
+      <div className="additional-content mt-5 mb-5">
+        {/*Whatever other content we want*/}
       </div>
     </>
   );
