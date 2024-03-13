@@ -8,7 +8,7 @@ function ContactForm() {
   };
 
   return (
-    <Container style={{ maxWidth: '600px', background: 'white', padding: '20px', borderRadius: '10px'}}>
+    <Container style={{ maxWidth: '600px', padding: '20px', borderRadius: '10px'}}>
       <Form className='container'>
         <Form.Group controlId="formEmail">
           <Form.Label>Email address</Form.Label>

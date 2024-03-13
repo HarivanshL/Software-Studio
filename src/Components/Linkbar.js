@@ -6,7 +6,7 @@ const Linkbar = ({links}) =>{
     <div className="buttons row text-center">
     {links.map((link, index) => (
         <div className="col-md-4" key={index}>
-          <NavLink className="button btn-block fixed-width" to={link.route} style={{textDecoration: "none;"}}>
+          <NavLink className="button btn-block fixed-width" to={link.route}>
             {link.name}
           </NavLink>
         </div>
