@@ -6,6 +6,7 @@ function ContactForm() {
 
   const [email, setEmail] = useState();
   const [message, setMessage] = useState();
+  const [formStatus, setFormStatus] = useState('');
 
   const sendData = async () => {
     try {
@@ -27,12 +28,17 @@ function ContactForm() {
         console.error('Failed to send data:', response.statusText);
       }
     } catch (error) {
+      setFormStatus("Form failed to send")
+      console.log({formStatus});
       console.error('Error sending data:', error);
     }
     };
 
   return (
     <Container style={{ maxWidth: '600px', padding: '20px', borderRadius: '10px'}}>
+      <Container style = {{ backgroundColor: formStatus === "Form failed to send" ? 'pink' : 'transparent'}}>
+        {formStatus}
+      </Container>
       <Form className='container'>
         <Form.Group controlId="formEmail">
           <Form.Label>Email address</Form.Label>

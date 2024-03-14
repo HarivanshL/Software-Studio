@@ -7,6 +7,7 @@ function LoginForm() {
 
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const [loginStatus, setLoginStatus] = useState('');
   const sendData = async() => {
     // Function to handle form submission
 
@@ -26,9 +27,13 @@ function LoginForm() {
         const responseData = await response.json();
         console.log("Data sent:", responseData);
       } else {
+        setLoginStatus("Incorrect username or password")
+        console.log({loginStatus});
         console.error('Failed to send data:', response.statusText);
       }
     } catch (error) {
+      setLoginStatus("Incorrect username or password")
+      console.log({loginStatus});
       console.error('Error sending data:', error);
     }
     };
@@ -36,6 +41,9 @@ function LoginForm() {
   return (
     <>
     <Container style={{ maxWidth: '600px', background: 'white', padding: '20px', borderRadius: '10px'}}>
+    <Container style = {{ backgroundColor: loginStatus === "Incorrect username or password" ? '#ffcccc' : 'transparent'}}>
+        {loginStatus}
+      </Container>
       <Form className='container'>
         <Form.Group controlId="formEmail">
           <Form.Label>Email address</Form.Label>
@@ -51,6 +59,7 @@ function LoginForm() {
           Submit
         </Button>
       </Form>
+
     </Container>
     </>
 
