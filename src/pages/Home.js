@@ -55,7 +55,7 @@ function Home() {
         </Row>
       </Container>
       <div className="linkbar">
-        <Linkbar links={links} />
+        <Linkbar links={[]} />
 
         {/*FIXME holy moly this chunk below is bad*/}
         <Container fluid style={{ backgroundColor: "#5E5E5E" }}>
