@@ -40,7 +40,7 @@ function LoginForm() {
 
   return (
     <>
-    <Container style={{ maxWidth: '600px', background: 'white', padding: '20px', borderRadius: '10px'}}>
+    <Container style={{ maxWidth: '600px', background: 'white', padding: '20px', borderRadius: '10px'}} >
     <Container style = {{ backgroundColor: loginStatus === "Incorrect username or password" ? '#ffcccc' : 'transparent'}}>
         {loginStatus}
       </Container>
