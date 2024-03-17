@@ -2,25 +2,37 @@
 import App from '../css-styling/App.css';
 import React, { useState } from 'react';
 import Member from '../components/Member'
-import users from '../utilities/users'
-import { useEffect, useState } from 'react';
+import { Container } from 'react-bootstrap';
+import { useEffect } from 'react';
+import { getMembers } from '../utilities/users';
+
 
 function Members() {
 
   const [members, setMembers] = useState([]);
   useEffect( () => {
-    const allUsers = users.getMembers();
-    setMembers(allUsers);
+    async function fetchMembers(){
+      try{
+      const allUsers = await getMembers();
+      setMembers(allUsers);
+      console.log(allUsers);
+      }
+      catch(error){
+        console.log(error);
+      }
+    }
+    fetchMembers();
+
   }, []);
 
   return (
     <>
-    <Conatiner>
+    <Container>
       {members.map(member => {
         <Member usermodel = {member} />
       })
-    };
-    </Conatiner>
+    }
+    </Container>
     </>
   );
 }

@@ -1,6 +1,4 @@
 
-import userModel from '../utilities/users'
-
 async function getMembers() {
     const response = await fetch('http://localhost:4000/members', {
         method: 'GET',
@@ -9,6 +7,7 @@ async function getMembers() {
         },
       });
     if(response.ok){
+        console.log(response.body);
         return response.body;
     }
     else{
@@ -18,6 +17,6 @@ async function getMembers() {
     
 };
 
-modules.export = {
+module.exports = {
     getMembers
 }

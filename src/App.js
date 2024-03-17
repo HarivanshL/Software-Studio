@@ -7,6 +7,7 @@ import Navbar from './components/Navbar'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
+import Members from './pages/Members'
 
 
 function App() {
@@ -22,6 +23,9 @@ function App() {
       </Routes>
       <Routes>
         <Route path="/login" element={<Login />} />
+      </Routes>
+      <Routes>
+        <Route path="member" element={<Members />} />
       </Routes>
     </Router>
   </>
