@@ -9,15 +9,15 @@ function Members() {
 
   const [members, setMembers] = useState([]);
   useEffect( () => {
-    allUsers = users.getUsers();
+    const allUsers = users.getMembers();
     setMembers(allUsers);
   }, []);
 
   return (
     <>
     <Conatiner>
-      {memebers.map(member => {
-        <Memmber usermodel = {member} />
+      {members.map(member => {
+        <Member usermodel = {member} />
       })
     };
     </Conatiner>
