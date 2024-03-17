@@ -10,10 +10,13 @@ import { getMembers } from '../utilities/users';
 function Members() {
 
   const [members, setMembers] = useState([]);
+  console.log(members);
   useEffect( () => {
+    /*
     async function fetchMembers(){
       try{
       const allUsers = await getMembers();
+      console.log(allUsers);
       setMembers(allUsers);
       console.log(allUsers);
       }
@@ -22,14 +25,28 @@ function Members() {
       }
     }
     fetchMembers();
+    */
+    fetch('http://localhost:4000/member')
+    .then(res => {
+     return res.json();
+    })
+    .then((data) => {
+     console.log(data);
+     setMembers(data);
+     console.log(members);
+    });
 
   }, []);
+
+  useEffect(() => {
+    console.log(members);
+  }, [members]);
 
   return (
     <>
     <Container>
-      {members.map(member => {
-        <Member usermodel = {member} />
+      {members.map((member) => {
+        return <Member usermodel = {member} />
       })
     }
     </Container>
