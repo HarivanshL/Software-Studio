@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { loginUser }  from '../utilities/auth/login'; 
 
 function LoginForm() {
 
@@ -10,33 +11,27 @@ function LoginForm() {
   const [loginStatus, setLoginStatus] = useState('');
   const sendData = async() => {
     // Function to handle form submission
-
+    const formData = {
+      email: email,
+      password: password
+    }
     try {
-      const FormData = {
-        email: email,
-        password: password
-      }
-      const response = await fetch('http://localhost:4000/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(FormData), // Replace this with your actual data
-      });
+      const response = await loginUser(formData);
       if(response.ok){
         const responseData = await response.json();
-        console.log("Data sent:", responseData);
+        console.log("login succesful");
+        //Insert redirect here
       } else {
         setLoginStatus("Incorrect username or password")
         console.log({loginStatus});
-        console.error('Failed to send data:', response.statusText);
+        console.error("Failed to authenticate");
       }
     } catch (error) {
-      setLoginStatus("Incorrect username or password")
-      console.log({loginStatus});
-      console.error('Error sending data:', error);
+      console.log(error);
     }
-    };
+    
+  };
+
 
   return (
     <>
