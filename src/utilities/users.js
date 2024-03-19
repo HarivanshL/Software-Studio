@@ -19,7 +19,7 @@ async function getMembers() {
     }
     */
    try{
-    const response = await fetch('http://localhost:4000/member');
+    const response = await fetch('http://localhost:4000/members');
    
    if(response.ok){
     console.log("successfully pulled members")
@@ -33,6 +33,7 @@ async function getMembers() {
    catch(error){
     console.log(error);
    }
+   return [];
 
     
 };

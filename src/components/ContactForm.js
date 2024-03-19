@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { contact } from '../utilities/contact'
 
 function ContactForm() {
 
@@ -9,29 +10,23 @@ function ContactForm() {
   const [formStatus, setFormStatus] = useState('');
 
   const sendData = async () => {
-    try {
-      const FormData = {
-        email: email,
-        message: message
+
+      try{
+        const formData = {
+          email: email,
+          message: message
+        }
+        const response = await contact(formData);
+        if(Object.keys(response).length <1){
+          setFormStatus("Your message failed to send");
+        }
+        else{
+          setFormStatus("Your message has been sent!");
+        }
       }
-      const response = await fetch('http://localhost:4000/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(FormData), // Replace this with your actual data
-      });
-      if(response.ok){
-        const responseData = await response.json();
-        console.log("Data sent:", responseData);
-      } else {
-        console.error('Failed to send data:', response.statusText);
+      catch(error){
+        console.log(error);
       }
-    } catch (error) {
-      setFormStatus("Form failed to send")
-      console.log({formStatus});
-      console.error('Error sending data:', error);
-    }
     };
 
   return (

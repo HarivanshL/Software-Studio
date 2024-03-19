@@ -5,6 +5,7 @@ import Member from '../components/Member'
 import { Container } from 'react-bootstrap';
 import { useEffect } from 'react';
 import { getMembers } from '../utilities/users';
+import CustomNavbar from '../components/Navbar';
 
 
 function Members() {
@@ -15,9 +16,11 @@ function Members() {
   
     async function fetchMembers(){
       try{
-      const allUsers = await getMembers();
-      setMembers(allUsers);
-      console.log(members);
+      const response = await getMembers();
+      if(response.length > 0){
+        setMembers(response);
+        console.log(response);
+      }
       }
       catch(error){
         console.log(error);
@@ -34,11 +37,12 @@ function Members() {
 */
   return (
     <>
+    <CustomNavbar/>
     <Container>
-      {members.map((member) => {
-        return <Member usermodel = {member} />
-      })
-    }
+    {members.length > 0 && members.map((member) => (
+          <Member key={member.id} usermodel={member} />
+        ))}
+
     </Container>
     </>
   );
